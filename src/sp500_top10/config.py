@@ -370,7 +370,7 @@ class Config:
 
 
 def load_config(project_root: Path) -> Config:
-    root = project_root.resolve()
+    root = project_root.expanduser().absolute()
     profile = root / ".local/paths.json"
     local = json.loads(profile.read_text(encoding="utf-8")) if profile.exists() else {}
     defaults = {
@@ -393,7 +393,7 @@ def load_config(project_root: Path) -> Config:
     values = {}
     for key, default in defaults.items():
         value = Path(os.environ.get(env[key], local.get(key, default))).expanduser()
-        values[key] = (root / value).resolve() if not value.is_absolute() else value.resolve()
+        values[key] = (root / value).absolute() if not value.is_absolute() else value.absolute()
     config = Config(paths=Paths(root=root, **values))
     config.validate()
     return config
