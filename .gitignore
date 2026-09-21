@@ -1,2 +1,39 @@
+# Local data, reference snapshots, generated results, and environment settings
+.private/
+.migration/
+.local/
+/data/
+/outputs/
+/logs/
+/cache/
+*.duckdb
+*.duckdb.wal
+.env
 .venv/
-raw_data/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.ruff_cache/
+# Original research contains private source access and saved outputs.
+/*.ipynb
+!/notebooks/
+!/notebooks/exploration.ipynb
+
+# Private preparation material and temporary pre-relocation checkout
+/raw_data/
+/backup/
+/SP500-Top10-AI-Assisted/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.parquet
+.env.*
+!.env.example
+# Only the clean exploration notebook is eligible for publication here.
+/notebooks/*
+!/notebooks/exploration.ipynb
