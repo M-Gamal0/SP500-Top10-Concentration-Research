@@ -31,7 +31,8 @@ class OperationalTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.temporary = tempfile.TemporaryDirectory(prefix="sp500-test-")
-        cls.root = Path(cls.temporary.name)
+        # Windows temporary paths may use an 8.3 alias; match load_config's canonical paths.
+        cls.root = Path(cls.temporary.name).resolve()
         cls.source = create(cls.root, end="1999-03-31")
 
     @classmethod
