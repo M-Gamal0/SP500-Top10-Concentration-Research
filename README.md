@@ -1,8 +1,8 @@
-# S&P 500 Top 10 Index Backtester
+# S&P 500 Top 10 Concentration Research
 
 ![Python](https://img.shields.io/badge/Python-3.13%2B-3776AB?logo=python&logoColor=white)
 ![Database](https://img.shields.io/badge/Database-DuckDB-FFC107)
-[![Python checks](https://github.com/M-Gamal0/SP500-Top10-Index-Backtester/actions/workflows/checks.yml/badge.svg)](https://github.com/M-Gamal0/SP500-Top10-Index-Backtester/actions/workflows/checks.yml)
+[![Python checks](https://github.com/M-Gamal0/SP500-Top10-Concentration-Research/actions/workflows/checks.yml/badge.svg)](https://github.com/M-Gamal0/SP500-Top10-Concentration-Research/actions/workflows/checks.yml)
 
 A modular Python research pipeline for constructing and evaluating concentrated S&P 500 portfolios. It combines quarterly company selection, daily price-return and total-return backtesting, performance and risk analysis, and factor attribution in one reproducible workflow.
 
@@ -36,8 +36,8 @@ The production application uses ordinary Python modules. It does not depend on J
 Use Python 3.13 or newer. The historical compatibility checks were performed with Python 3.13.5 on Windows.
 
 ```bash
-git clone https://github.com/M-Gamal0/SP500-Top10-Index-Backtester.git
-cd SP500-Top10-Index-Backtester
+git clone https://github.com/M-Gamal0/SP500-Top10-Concentration-Research.git
+cd SP500-Top10-Concentration-Research
 
 python -m venv .venv
 source .venv/Scripts/activate       # Windows / Git Bash
@@ -251,7 +251,7 @@ Outputs and databases remain local by default. The pipeline exports tables and c
 ## Project Structure
 
 ```text
-SP500-Top10-Index-Backtester/
+SP500-Top10-Concentration-Research/
 ├── run.py                         # Single entry point
 ├── pyproject.toml                 # Package metadata and direct dependencies
 ├── requirements-lock.txt          # Original research environment versions
