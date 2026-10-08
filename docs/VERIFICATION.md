@@ -1,6 +1,6 @@
 # Migration verification
 
-Local verification date: 2026-09-21. Runtime: existing Python 3.13.5 virtual environment, invoked through Git Bash on Windows. No GitHub publication was performed.
+Local verification date: 2026-09-21. Runtime: existing Python 3.13.5 virtual environment, invoked through Git Bash on Windows. The historical results below describe that local migration run.
 
 ## Preserved reference
 
@@ -40,4 +40,4 @@ The original monthly-reset counter label mismatch remains preserved, as required
 
 Online adapters were checked with controlled responses, including retries, parsing, download options, and raw-input recording. A live Yahoo/FRED/Fama–French refresh was not performed as part of the final compatibility run; provider revisions would change the inputs. Use `python run.py --offline` to reproduce the verified local snapshot and `python run.py` to request a fresh online run.
 
-CI configuration is prepared for Windows and Linux with synthetic data. Remote CI has not run because the project has not been published. Review destination repository contents and history separately before a future public release.
+The GitHub Actions workflow runs lint, formatting, tests, and the synthetic offline workflow on Windows and Linux. On October 8, 2026, [run 37824276861](https://github.com/M-Gamal0/SP500-Top10-Concentration-Research/actions/runs/37824276861) completed successfully for commit `3d55f58`. This validates the public synthetic workflow; the historical comparisons above still require private inputs. See [public release notes](PUBLIC_RELEASE.md) for the sharing boundaries.

@@ -1,11 +1,27 @@
-# Public release preparation
+# Public release scope
 
-No repository has been published, pushed, or committed as part of this implementation.
+The shared repository contains the research application and a deterministic synthetic demonstration. Historical source data, prepared research databases, and private reference material remain local.
 
-The production project now occupies the existing repository root. The relocation review found one reachable commit containing only `.gitignore` and empty README and requirements files; no data or notebooks were present in that history. A `.gitignore` does not remove material already committed. Review all future staged files before each commit. Nothing was staged, committed, or pushed during relocation. See `RELOCATION.md`.
+## Included in the repository
 
-Include the Python package, entry file, dependency specifications, documentation, synthetic generator, tests, and optional exploration notebook. The original notebooks at the project root may contain private source access and saved records and are ignored. Notebooks 01, 02, and 08 are outside the converted production scope.
+- Python package, entry point, packaged SQL queries, and dependency specifications.
+- Methodology, architecture, output contracts, and verification documentation.
+- Calculation, provider, and operational tests, plus the GitHub Actions workflow.
+- Fictional-data generator and an optional exploration notebook without saved outputs.
+- Operational tools for provider snapshots, export recovery, and comparison with a locally held private reference.
 
-Do not include the private source or result databases, `.private/`, `.migration/`, `.local/`, caches, logs, environments, generated build folders, or entire output directories by default. Selected calculated reports can be added deliberately later.
+The synthetic demonstration runs without licensed inputs or network access. Historical reproduction requires a compatible prepared source database and, for offline operation, a recorded provider snapshot. These inputs are not distributed with the code.
 
-Before publishing, verify the actual tracked file list and history in the destination repository and run the synthetic workflow and tests. This is a release step, not something the application performs automatically.
+## Local-only material
+
+The ignore rules exclude source and result databases, original research notebooks, raw data, generated outputs, caches, logs, environments, backups, credentials files, and private reference directories.
+
+The migration checkpoints, relocation notes, and reference-freezing helper are also retained locally and excluded from version control. They are not required to install the application or run the synthetic demonstration.
+
+Calculated reports and research presentations may be added deliberately after reviewing their contents and applicable sharing permissions. Generated output directories are excluded by default.
+
+## Before sharing an update
+
+Review the staged file list and diff, keep notebook outputs and attachments clear, and run the checks appropriate to the change. Application changes should pass the automated checks and synthetic workflow described in the [README](../README.md#quality-and-validation).
+
+Ignore rules do not remove files already tracked by Git or erase earlier commits. Untracking a file while keeping its local copy excludes it from subsequent commits; its previous versions remain in repository history.

@@ -37,3 +37,8 @@ dist/
 # Only the clean exploration notebook is eligible for publication here.
 /notebooks/*
 !/notebooks/exploration.ipynb
+
+# Local-only migration records and reference preparation utility
+/docs/IMPLEMENTATION_PROGRESS.md
+/docs/RELOCATION.md
+/tools/freeze_reference.py

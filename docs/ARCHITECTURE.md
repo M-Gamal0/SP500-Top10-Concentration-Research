@@ -1,6 +1,6 @@
 # S&P 500 Top 10: production architecture
 
-Status: implemented, relocated to the repository root, and verified locally. See [verification](VERIFICATION.md), [relocation verification](RELOCATION.md), and [saved checkpoints](IMPLEMENTATION_PROGRESS.md). GitHub publication remains deferred.
+Status: implemented and verified. See [verification](VERIFICATION.md) for historical compatibility and automated checks, and [public release notes](PUBLIC_RELEASE.md) for the boundary between shared code and local research material.
 
 Prepared from the code in notebooks 03–07 and read-only inspection of the existing DuckDB database and CSV inventory. Notebook 08 is schema reference only.
 
@@ -181,14 +181,13 @@ project/
 │   └── test_providers.py
 ├── tools/
 │   ├── capture_market_snapshot.py
-│   ├── freeze_reference.py
 │   ├── recover_csv_publication.py
 │   └── verify_compatibility.py
 └── docs/
     ├── ARCHITECTURE.md
     ├── CSV_OUTPUT_CONTRACT.md
     ├── VERIFICATION.md
-    └── RELOCATION.md
+    └── PUBLIC_RELEASE.md
 ```
 
 These boundaries describe responsibilities, not a target file count. A small cohesive component can remain in one file. Do not add empty abstraction layers or miscellaneous `utils.py` collections. Longer SQL statements belong in named SQL resources packaged with the application; short queries may stay in the relevant repository method.
